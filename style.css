@@ -1,0 +1,82 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: rgb(24, 23, 27);
+    
+}
+
+.container {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+.container .cigarette {
+    transform-style: preserve-3d;
+    animation: animate 15s linear infinite;
+    
+    
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg);
+    }
+}
+
+.container .cigarette div {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 1.7em ;
+    font-weight: 900;
+    line-height: 0.76em;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    text-transform: uppercase;
+    transform: translate(-50%, -50%) rotateX(calc(var(--in-index) * 36deg))
+    translateZ(31.25px); 
+    background: rgba(0, 0, 0, 0.25);
+    transform-style: preserve-3d;
+}
+
+.container .cigarette div i {
+    font-style: normal;
+    color: rgb(241, 165, 50);
+}
+
+.container .cigarette div i:first-child:after {
+   content: 'LL';
+   text-transform: lowercase;
+   color: rgb(179, 179, 179);
+}
+
+.container .cigarette div i:last-child {
+    content: 'L';
+    text-transform: lowercase;
+    color: rgb(216, 59, 59);
+    filter: blur(2px);
+    text-shadow: -4px 0 2px black,
+    8px 0 20px rgb(187, 57, 57),
+    8px 0 24px rgb(190, 48, 48),
+    8px 0 0 black,
+    12px 0 grey,
+    16px 0 rgb(77, 76, 76),
+    20px 0 rgb(41, 40, 40)
+    ;
+ }
+
+ 
